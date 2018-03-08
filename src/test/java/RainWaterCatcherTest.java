@@ -141,5 +141,83 @@ public class RainWaterCatcherTest {
         Assert.assertEquals(expected,actual);
     }
 
+    @Test
+    public void irrelevantHighLeftWallTest(){
+        //Given
+        Integer[] landscape = {1000,4,0,4};
+
+        //When
+        int expected = 4;
+        int actual = test.calculateVolume(landscape);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void irrelevantHighRightWallTest(){
+        //Given
+        Integer[] landscape = {4,0,4,1000};
+
+        //When
+        int expected = 4;
+        int actual = test.calculateVolume(landscape);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void advancedTest(){
+        //Given
+        Integer[] landscape = {2,0,3,1,10,4,11,4,0,6,9,1,13};
+
+        //When
+        int expected = 45;
+        int actual = test.calculateVolume(landscape);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void advancedTest2(){
+        //Given
+        Integer[] landscape = {13,1,9,6,0,4,20,4,10,1,3,0,1};
+
+        //When
+        int expected = 54;
+        int actual = test.calculateVolume(landscape);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void advancedTest3(){
+        //Given
+        Integer[] landscape = {13,1,9,6,0,4,20,4,10,6,5,4};
+
+        //When
+        int expected = 51;
+        int actual = test.calculateVolume(landscape);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void advancedTest4(){
+        //Given
+        Integer[] landscape = {50,6,75,100,99,101,0,5,8,200,50,25,3,9,0};
+
+        //When
+        int expected = 341;
+        int actual = test.calculateVolume(landscape);
+
+        //Then
+        Assert.assertEquals(expected,actual);
+    }
+
 
 }
