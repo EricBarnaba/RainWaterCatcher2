@@ -6,6 +6,13 @@ public class RainWaterCatcher {
         return -1;
     }
 
+    public void findContainers(Integer[] landscape){
+        int leftwall = 0;
+        int rightwall = 0;
+
+
+    }
+
 
 
 }
